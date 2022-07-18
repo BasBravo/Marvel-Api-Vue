@@ -70,9 +70,14 @@
 
         methods: {
             
-            async getData(type, query = {}) {
+            async getData(type, query = {}, refresh = false) {
+                
+                console.log(this.type);
+                console.log(type);
+                console.log(this.type !== type);
+                console.log(Object.keys(query).length);
 
-                if(this.type !== type || Object.keys(query).length === 0) {
+                if(refresh || Object.keys(query).length === 0) {
                     this.items = [];
                     this.pages = 0;
                 }else{

@@ -165,7 +165,7 @@ export default {
 
     methods: {
         get(){
-            this.$emit("get", this.type, this.query);
+            this.$emit("get", this.type, this.query, true);
         },
         reset() {
             this.$refs.formFilters.reset();

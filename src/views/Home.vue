@@ -62,7 +62,7 @@
             //Crear carga infinita al hacer scroll
             window.onscroll = () => {
                 let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight >= document.documentElement.offsetHeight - 400;
-                if (!this.in_progress && bottomOfWindow) this.getData(this.type);
+                if (!this.in_progress && bottomOfWindow) this.getData(this.type, this.last_query);
             };
 
             this.getData(this.type);
@@ -70,9 +70,9 @@
 
         methods: {
             
-            async getData(type, query) {
-                
-                if(this.type !== type || query !== undefined) {
+            async getData(type, query = {}) {
+
+                if(this.type !== type || Object.keys(query).length === 0) {
                     this.items = [];
                     this.pages = 0;
                 }else{
@@ -93,6 +93,9 @@
 
             async getComics(query) {
                 
+                query.limit = this.limit;
+                query.offset = this.pages * this.limit;
+
                 await Marvel.getComics(query)
                     .then((response) => {
                     

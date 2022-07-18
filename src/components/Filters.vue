@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="flex items-center space-x-2">
-                <span class="block text-sm text-gray-400">Avanzado</span>
+                <span class="hidden md:block text-sm text-gray-400">Avanzado</span>
                 <div :class="$panda.styles.buttonPrimary" @click="open = !open;">
                     <ChevronDownIcon v-if="!open" class="flex-shrink-0 h-5 w-5" aria-hidden="true" />
                     <ChevronUpIcon v-if="open" class="flex-shrink-0 h-5 w-5" aria-hidden="true" />

@@ -5,7 +5,7 @@
         
         <Filters @get="getData"></Filters>
         
-        <TransitionGroup name="list" tag="div" v-if="items" class="grid grid-cols-3 gap-4 pb-6" @enter="onEnter">
+        <TransitionGroup name="list" tag="div" v-if="items" class="grid grid-cols-2 md:grid-cols-3 gap-4 pb-6" @enter="onEnter">
             <div v-if="items.length > 0" v-for="comic in items" :key="comic.id">
                 <CatalogItem :type="type"  :data="comic"></CatalogItem>
             </div>

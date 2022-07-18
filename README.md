@@ -4,6 +4,8 @@
 
 > Esta app hace un búsqueda sencilla en los recursos de la api de: 'Comics' y 'Personajes'. En la búsqueda por palabra, la api solo se limita a obtener solo lo que EMPIEZA con el término ingresado. Ten en cuenta esto al ver los resultados de tu búsqueda.
 
+Puedes ver la [DEMO](https://marvel-api-vue.vercel.app/) en Vercel 
+
 ## Tecnologías
 
 - Node 

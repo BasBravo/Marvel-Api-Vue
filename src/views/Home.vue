@@ -62,7 +62,7 @@
             //Crear carga infinita al hacer scroll
             window.onscroll = () => {
                 let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight >= document.documentElement.offsetHeight - 400;
-                if (!this.in_progress && bottomOfWindow) this.getComics(this.type);
+                if (!this.in_progress && bottomOfWindow) this.getData(this.type);
             };
 
             this.getData(this.type);
